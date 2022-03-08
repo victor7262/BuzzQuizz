@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>BuzzQuizz</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,100;1,400&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="./src/css/reset.css" />
+		<link rel="stylesheet" href="./src/css/index.css" />
+		<link rel="stylesheet" href="./src/css/topo.css" />
+		<link rel="stylesheet" href="./src/css/loading.css" />
+		<link rel="stylesheet" href="./src/css/pagina-lista-quizzes.css" />
+	</head>
+	<body>
+		<div class="topo">
+			<div class="topo-conteudo">BuzzQuizz</div>
+		</div>
+		<div class="loading">
+			<div class="loadingio-spinner-spin-3h2wgx02yzb">
+				<div class="ldio-3fpsdlwfkbz">
+					<div><div></div></div>
+					<div><div></div></div>
+					<div><div></div></div>
+					<div><div></div></div>
+					<div><div></div></div>
+					<div><div></div></div>
+					<div><div></div></div>
+					<div><div></div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="pagina-lista-quizzes">
+			<div class="pagina-lista-quizzes-conteudo">
+				<div class="quizzes-do-usuario">
+					<div class="sem-quizz-do-usuario">
+						<div>Você não criou nenhum quizz ainda :(</div>
+						<button onclick="CriarQuizz()">Cria Quizz</button>
+					</div>
+				</div>
+				<div class="todos-os-quizzes">
+					<h1>Todos os Quizzes</h1>
+					<div class="lista-quizzes">
+						<div class="quizz">
+							<div class="imagem-do-quizz grad">
+								<img
+									src="https://cdn.ome.lt/cjGB89sd8MuZlR6p8fkr72ZvkDw=/1200x630/smart/extras/conteudos/2019-11-30-OMELISTA-DQ.png"
+								/>
+							</div>
+							<div class="titulo-do-quizz">Star wars</div>
+						</div>
+						<div class="quizz">
+							<div class="imagem-do-quizz">
+								<img
+									src="https://i.pinimg.com/280x280_RS/cb/b2/80/cbb280fa8c687cf3b137df878bf82d08.jpg"
+								/>
+							</div>
+							<div class="titulo-do-quizz">ra ra ra</div>
+						</div>
+						<div class="quizz">
+							<div class="imagem-do-quizz">
+								<img
+									src="https://cdn.vox-cdn.com/thumbor/23dWY86RxkdF7ZegvfnY8gFjR7s=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19157811/ply0947_fall_reviews_2019_tv_anime.jpg"
+								/>
+							</div>
+							<div class="titulo-do-quizz">
+								qual personagem de boku no hero academia vc seria?
+							</div>
+						</div>
+						<div class="quizz">
+							<div class="imagem-do-quizz">
+								<img
+									src="https://cdn.ome.lt/cjGB89sd8MuZlR6p8fkr72ZvkDw=/1200x630/smart/extras/conteudos/2019-11-30-OMELISTA-DQ.png"
+								/>
+							</div>
+							<div class="titulo-do-quizz">Star wars</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="pagina-quizz">Página do quizz</div>
+
+		<div class="criar-quizz">Criar quizz</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+		<script src="./src/scripts/index.js"></script>
+	</body>
+</html>

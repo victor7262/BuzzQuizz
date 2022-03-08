@@ -1,0 +1,23 @@
+html,
+body {
+	font-family: "Roboto", sans-serif;
+	background-color: #fafafa;
+	/* height: 100%; */
+}
+
+.loading {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	height: 100%;
+}
+
+.pagina-quizz {
+	display: none;
+}
+
+.criar-quizz {
+	display: none;
+}
