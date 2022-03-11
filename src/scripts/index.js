@@ -6,8 +6,10 @@ let listaDeQuizzesGlobal = [],
 iniciarSite();
 
 function iniciarSite() {
-	exibirTela("loading");
-	buscarTodosQuizzes();
+	// exibirTela("loading");
+	//buscarTodosQuizzes();
+
+	CriarQuizz();
 }
 
 function buscarTodosQuizzes() {

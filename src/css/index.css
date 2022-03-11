@@ -18,6 +18,58 @@ body {
 	display: none;
 }
 
-.pagina-criar-quizz {
-	display: none;
+.titulo-h1 {
+	display: flex;
+	align-items: center;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 23px;
+	font-weight: 700;
+}
+
+.caixa-branca {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: #ffffff;
+}
+
+.btn-principal {
+	background: #ec362d;
+	border-radius: 15px;
+	height: 54px;
+
+	border: none;
+
+	font-style: normal;
+	font-weight: 400;
+	font-size: 21px;
+	line-height: 25px;
+
+	color: #fff5f4;
+}
+
+input {
+	height: 46px;
+	background: #ffffff;
+	border: 1px solid #d1d1d1;
+	box-sizing: border-box;
+	border-radius: 5px;
+
+	font-family: "Roboto";
+	font-style: italic;
+	font-weight: 400;
+	font-size: 19px;
+	line-height: 22px;
+	color: #5f5f5f;
+
+	padding-left: 23px;
+}
+
+::placeholder {
+	color: #bababa;
+	opacity: 1; /* Firefox */
 }
