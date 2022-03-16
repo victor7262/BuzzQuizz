@@ -44,7 +44,7 @@
 				<div class="quizzes-do-usuario">
 					<div class="quizzes-do-usuario-conteudo">
 						<div class="titulo-h1">
-							<h1>Seus Quizzes</h1>
+							<h1>Seus Quizzes</h2>
 							<ion-icon onclick="CriarQuizz()" name="add-circle"></ion-icon>
 						</div>
 						<div class="lista-quizzes">
@@ -100,48 +100,134 @@
 		<div class="pagina-quizz">Página do quizz</div>
 
 		<div class="pagina-criar-quizz">
-			<div class="pagina-criar-quizz-etapa1">
-				<div class="pagina-criar-quizz-etapa1-conteudo">
-					<div class="titulo-h1">
-						<h1>Comece pelo começo</h1>
+			<div class="etapa etapa1">
+				<h1>Comece pelo começo</h1>
+
+				<form class="form-etapa">
+					<div class="form-input">
+						<input  id="TituloQuizz"
+								name="TituloQuizz"
+								type="text"
+								placeholder="Título do seu quizz">
 					</div>
 
-					<div class="caixa-branca comece-pelo-comeco">
-						<input
-							id="TituloQuizz"
-							name="TituloQuizz"
-							type="text"
-							placeholder="Título do seu quizz"
-						/>
-
-						<input
-							id="ImagemQuizz"
-							name="ImagemQuizz"
-							type="text"
-							placeholder="URL da imagem do seu quizz"
-						/>
-
-						<input
-							id="QuantidadeDePerguntas"
-							name="QuantidadeDePerguntas"
-							type="text"
-							placeholder="Quantidade de perguntas do quizz"
-						/>
-
-						<input
-							id="QuantidadeDeNiveis"
-							name="QuantidadeDeNiveis"
-							type="text"
-							placeholder="Quantidade de níveis do quizz"
-						/>
+					<div class="form-input">
+						<input  id="ImagemQuizz"
+								name="ImagemQuizz"
+								type="text"
+								placeholder="URL da imagem do seu quizz">
 					</div>
 
-					<button class="btn btn-principal">
-						Prosseguir para criar peguntas
-					</button>
-				</div>
+					<div class="form-input">
+						<input  id="QuantidadeDePerguntas"
+								name="QuantidadeDePerguntas"
+								type="text"
+								placeholder="Quantidade de perguntas do quizz">
+					</div>
+
+					<div class="form-input">
+						<input  id="QuantidadeDeNiveis"
+								name="QuantidadeDeNiveis"
+								type="text"
+								placeholder="Quantidade de níveis do quizz">
+					</div>
+				</form>
+
+				<button class="btn btn-principal">
+					Prosseguir para criar peguntas
+				</button>
 			</div>
-			<div class="pagina-criar-quizz-etapa2"></div>
+
+			<div class="etapa etapa2">
+				<h1>Crie suas perguntas</h1>
+
+				<form id="pergunta1" class="form-etapa">
+					<div class="subtitulo-esquerda">
+						<h2>Pergunta 1</h2>
+					</div>
+					<div class="form-input">
+						<input  id="TextoDaPergunta"
+								name="TextoDaPergunta"
+								type="text"
+								placeholder="Texto da pergunta"/>
+					</div>
+					<div class="form-input">
+						<input  id="CorDeFundoDaPergunta"
+								name="CorDeFundoDaPergunta"
+								type="text"
+								placeholder="Cor de fundo da pergunta"/>
+					</div>
+					
+					<div class="subtitulo-esquerda">
+						<h2>Resposta correta</h2>
+					</div>
+
+					<div class="form-input">
+						<input  id="RespostaCorreta"
+								name="RespostaCorreta"
+								type="text"
+								placeholder="Resposta correta"/>
+					</div>
+					<div class="form-input">
+						<input  id="URLDaImagem"
+								name="URLDaImagem"
+								type="text"
+								placeholder="URL da imagem"/>
+					</div>
+
+					<div class="subtitulo-esquerda">
+						<h2>Respostas incorretas</h2>
+					</div>
+
+					<div class="form-input">
+						<input  id="RespostaIncorreta1"
+								name="RespostaIncorreta1"
+								type="text"
+								placeholder="Resposta incorreta 1"/>
+					</div>
+					<div class="form-input">
+						<input  id="URLDaImagem1"
+								name="URLDaImagem1"
+								type="text"
+								placeholder="URL da imagem 1"/>
+					</div>
+
+					<div class="espacador"></div>
+
+					<div class="form-input">
+						<input  id="RespostaIncorreta2"
+								name="RespostaIncorreta2"
+								type="text"
+								placeholder="Resposta incorreta 2"/>
+					</div>
+					<div class="form-input">
+						<input  id="URLDaImagem2"
+								name="URLDaImagem2"
+								type="text"
+								placeholder="URL da imagem 2"/>
+					</div>
+
+					<div class="espacador"></div>
+
+					<div class="form-input">
+						<input  id="RespostaIncorreta3"
+								name="RespostaIncorreta3"
+								type="text"
+								placeholder="Resposta incorreta 3"/>
+					</div>
+					<div class="form-input">
+						<input  id="URLDaImagem3"
+								name="URLDaImagem3"
+								type="text"
+								placeholder="URL da imagem 3"/>
+					</div>
+				</form>
+
+				<button class="btn btn-principal">
+					Prosseguir para criar níveis
+				</button>
+			</div>
+
 			<div class="pagina-criar-quizz-etapa3"></div>
 			<div class="pagina-criar-quizz-etapa4"></div>
 		</div>
