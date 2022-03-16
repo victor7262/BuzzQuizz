@@ -1,5 +1,5 @@
 .pagina-criar-quizz {
-	display: flex;
+	display: none;
 	width: 100%;
 	height: 100%;
 	padding-top: 140px;
@@ -14,25 +14,46 @@
 	align-items: center;
 }
 
+.etapa .btn{
+	margin-top: 85px;
+}
+
 .etapa1{
+	display: flex;
+}
+
+.etapa2{
 	display: none;
 }
 
 .form-etapa{	
 	width: 600px;
-
 	margin-top: 27px;
-	margin-bottom: 85px;
+	/* margin-bottom: 85px; */
 	padding: 13px 20px 15px 16px;	
 }
 
 .subtitulo-esquerda{
 	padding: 20px 0px 4px 0px;
 	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	content: "jlksdfkjkljsdf";
+}
+
+.subtitulo-esquerda ion-icon{
+	font-size: 20px;
+	color: black;
 }
 
 .espacador{
 	margin-top: 15px;
+}
+
+.icones-para-colapsar{
+	position: relative;
+	right: 0px;
 }
 
 @media (max-width: 1100px) {
@@ -40,8 +61,8 @@
 		width: 100%;
 	}
 
-	.form-etapa {		
-		margin: 20px;
+	.etapa .btn{
+		margin-top: 20px;
 	}
 }
 

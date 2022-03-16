@@ -1,7 +1,8 @@
 html,
 body {
 	font-family: "Roboto", sans-serif;
-	background-color: #fafafa;
+	/* background-color: #fafafa; */
+	background-color: lightgray;
 	/* height: 100%; */
 }
 
@@ -42,8 +43,8 @@ form{
 	flex-direction: column;
 	align-items: center;
 	box-sizing: border-box;	
-	/* background-color: #ffffff; */
-	background-color: lightgray;
+	background-color: #ffffff;
+	/* background-color: lightgray; */
 }
 
 .caixa-branca {
@@ -93,4 +94,23 @@ input {
 ::placeholder {
 	color: #bababa;
 	opacity: 1; /* Firefox */
+}
+
+.nao-visivel{
+	display: none;
+}
+
+.colapsavel {
+	cursor: pointer;
+	width: 100%;
+	border: none;
+	outline: none;
+}
+
+.conteudo-colapsavel {
+	width: 100%;
+	padding: 0 18px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
 }
