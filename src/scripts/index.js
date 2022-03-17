@@ -1,5 +1,8 @@
 let listaDeQuizzesGlobal = [],
-	listaDeQuizzesDoUsuario = [];
+	listaDeQuizzesDoUsuario = [],
+	quizzEmCriacao = null,
+	quantidadeDePerguntas = 0,
+	quantidadeDeNiveis = 0;
 
 iniciarSite();
 
@@ -29,4 +32,14 @@ function obterTodosQuizzesSucesso(resposta) {
 
 function AbrirCriarQuizz() {
 	ExibirTela("pagina-criar-quizz");
+}
+
+function ProsseguirParaCriarPerguntas(){
+	const form = document.querySelector('#formEtapa1');
+
+	const titulo = form.querySelector('#TituloQuizz');
+	const imagem = form.querySelector('#ImagemQuizz');
+	const qtdPergunta = form.querySelector('#QuantidadeDePerguntas');
+	const qtdNiveis = form.querySelector('#QuantidadeDeNiveis');
+	
 }

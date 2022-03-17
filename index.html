@@ -109,13 +109,16 @@
 								name="TituloQuizz"
 								type="text"
 								placeholder="Título do seu quizz">
+						<div class="mensagem-validacao"></div>
+						
 					</div>
 
-					<div class="form-input">
+					<div class="form-input erro-de-validacao">
 						<input  id="ImagemQuizz"
 								name="ImagemQuizz"
 								type="text"
 								placeholder="URL da imagem do seu quizz">
+						<div class="mensagem-validacao"></div>
 					</div>
 
 					<div class="form-input">
@@ -123,6 +126,7 @@
 								name="QuantidadeDePerguntas"
 								type="text"
 								placeholder="Quantidade de perguntas do quizz">
+						<div class="mensagem-validacao"></div>
 					</div>
 
 					<div class="form-input">
@@ -130,10 +134,11 @@
 								name="QuantidadeDeNiveis"
 								type="text"
 								placeholder="Quantidade de níveis do quizz">
+						<div class="mensagem-validacao"></div>
 					</div>
 				</form>
 
-				<button class="btn btn-principal">
+				<button onclick="ProsseguirParaCriarPerguntas()" class="btn btn-principal">
 					Prosseguir para criar peguntas
 				</button>
 			</div>

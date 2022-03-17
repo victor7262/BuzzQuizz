@@ -114,3 +114,19 @@ input {
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
 }
+
+.erro-de-validacao input{
+	background-color: #FFE9E9;
+
+}
+
+.mensagem-validacao{
+	display: none;
+}
+
+.erro-de-validacao > .mensagem-validacao{
+	display: flex;
+	color: #ec362d;
+	font-size: 16px;
+	padding-top: 3px;
+}
