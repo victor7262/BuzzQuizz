@@ -45,7 +45,7 @@
 					<div class="quizzes-do-usuario-conteudo">
 						<div class="titulo-h1">
 							<h1>Seus Quizzes</h2>
-							<ion-icon onclick="CriarQuizz()" name="add-circle"></ion-icon>
+							<ion-icon onclick="AbrirCriarQuizz()" name="add-circle"></ion-icon>
 						</div>
 						<div class="lista-quizzes">
 							<div class="quizz">
@@ -68,7 +68,7 @@
 					</div>
 					<div class="sem-quizz-do-usuario">
 						<div>Você não criou nenhum quizz ainda :(</div>
-						<button onclick="CriarQuizz()">Cria Quizz</button>
+						<button onclick="AbrirCriarQuizz()">Cria Quizz</button>
 					</div>
 				</div>
 				<div class="todos-quizzes">
@@ -103,7 +103,7 @@
 			<div class="etapa etapa1">
 				<h1>Comece pelo começo</h1>
 
-				<form class="form-etapa">
+				<form id="formEtapa1" class="form-etapa">
 					<div class="form-input">
 						<input  id="TituloQuizz"
 								name="TituloQuizz"
@@ -322,12 +322,100 @@
 				</button>
 			</div>
 
-			<div class="pagina-criar-quizz-etapa3"></div>
+			<div class="etapa etapa3">
+				<h1>Agora, decida os níveis</h1>
+
+				<form id="Nivel1" class="form-etapa">
+					<div class="subtitulo-esquerda colapsavel">
+						<h2>Nível 1</h2>
+						<div class="icones-para-colapsar">
+							<ion-icon name="caret-down-outline"></ion-icon>
+							<ion-icon class="nao-visivel" name="caret-up-outline"></ion-icon>
+						</div>
+					</div>
+					<div class="conteudo-colapsavel">
+						<div class="form-input">
+							<input  id="TituloDoNivel"
+									name="TituloDoNivel"
+									type="text"
+									placeholder="Título do nível"/>
+						</div>
+
+						<div class="form-input">
+							<input  id="PorcentagemDeAcertoMinima"
+									name="PorcentagemDeAcertoMinima"
+									type="text"
+									placeholder="% de acerto mínima"/>
+						</div>
+
+						<div class="form-input">
+							<input  id="UrlDaImagemDoNivel"
+									name="UrlDaImagemDoNivel"
+									type="text"
+									placeholder="URL da imagem do nível"/>
+						</div>
+
+						<div class="form-input">
+							<input  id="DescricaoDoNivel"
+									name="DescricaoDoNivel"
+									type="text"
+									placeholder="Descrição do nível"/>
+						</div>
+						
+					</div>
+				</form>
+
+				<form id="Nivel2" class="form-etapa">
+					<div class="subtitulo-esquerda colapsavel">
+						<h2>Nível 2</h2>
+						<div class="icones-para-colapsar">
+							<ion-icon name="caret-down-outline"></ion-icon>
+							<ion-icon class="nao-visivel" name="caret-up-outline"></ion-icon>
+						</div>
+					</div>
+					<div class="conteudo-colapsavel">
+						<div class="form-input">
+							<input  id="TituloDoNivel"
+									name="TituloDoNivel"
+									type="text"
+									placeholder="Título do nível"/>
+						</div>
+
+						<div class="form-input">
+							<input  id="PorcentagemDeAcertoMinima"
+									name="PorcentagemDeAcertoMinima"
+									type="text"
+									placeholder="% de acerto mínima"/>
+						</div>
+
+						<div class="form-input">
+							<input  id="UrlDaImagemDoNivel"
+									name="UrlDaImagemDoNivel"
+									type="text"
+									placeholder="URL da imagem do nível"/>
+						</div>
+
+						<div class="form-input">
+							<input  id="DescricaoDoNivel"
+									name="DescricaoDoNivel"
+									type="text"
+									placeholder="Descrição do nível"/>
+						</div>
+						
+					</div>
+				</form>
+
+				<button class="btn btn-principal">
+					Finalizar Quizz
+				</button>
+			</div>
 			<div class="pagina-criar-quizz-etapa4"></div>
 		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 		<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+		<script src="./src/scripts/renderizador.js"></script>
+		<script src="./src/scripts/request.js"></script>
 		<script src="./src/scripts/index.js"></script>
 		<script>
 			const coll = document.getElementsByClassName("colapsavel");
