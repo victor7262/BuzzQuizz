@@ -33,7 +33,6 @@
 .form-etapa{	
 	width: 600px;
 	margin-top: 27px;
-	/* margin-bottom: 85px; */
 	padding: 13px 20px 15px 16px;	
 }
 
@@ -69,76 +68,3 @@
 		margin-top: 20px;
 	}
 }
-
-/* .pagina-criar-quizz {
-	display: flex;
-	height: 100%;
-	padding-top: 140px;
-	justify-content: center;
-}
-
-.pagina-criar-quizz-etapa1 {
-	display: none;
-	width: 600px;
-	justify-content: center;
-}
-
-.pagina-criar-quizz-etapa2 {
-	display: flex;
-	width: 600px;
-	justify-content: center;
-}
-
-.pagina-criar-quizz-etapa3 {
-	display: none;
-	width: 600px;
-	justify-content: center;
-}
-
-.pagina-criar-quizz-etapa4 {
-	display: none;
-	width: 600px;
-	justify-content: center;
-}
-
-.pagina-criar-quizz-etapa-conteudo {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	justify-content: center;
-}
-
-.pagina-criar-quizz-etapa1 .titulo-h1 {
-	justify-content: center;
-}
-
-.caixa-conteudo-para-criar-quizz {
-	margin-top: 27px;
-	margin-bottom: 85px;
-	padding: 13px 20px 15px 16px;
-	box-sizing: border-box;
-}
-
-.caixa-conteudo-para-criar-quizz input {
-	margin-top: 9px;
-}
-
-.caixa-conteudo-para-criar-quizz h2 {
-	margin-top: 20px;
-}
-
-.pagina-criar-quizz-etapa1 .btn {
-	padding: 0px 40px;
-}
-
-@media (max-width: 1100px) {
-	.pagina-criar-quizz-etapa1 {
-		width: 100%;
-	}
-
-	.caixa-conteudo-para-criar-quizz {
-		
-		margin: 20px;
-	}
-} */
