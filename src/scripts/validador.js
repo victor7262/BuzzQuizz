@@ -10,12 +10,13 @@ function EhStringValida(valor, tamanhoMinimo, tamanhoMaximo){
 }
 
 function EhNumeroValido(valor, valorMinimo, valorMaximo){
-    if (arguments.length == 1)
-        return !isNaN(valor);
-    else if (arguments.length == 2)
-        return !isNaN(valor) && valor >= valorMinimo;
+    if (valor == '' || isNaN(valor))
+        return false;
+
+    if (arguments.length == 2)
+        return valor >= valorMinimo;
     else if (arguments.length == 3)
-        return !isNaN(valor) && valor >= valorMinimo && valor <= valorMaximo;
+        return valor >= valorMinimo && valor <= valorMaximo;
     else
         return false;
 }
@@ -32,7 +33,13 @@ function EhUrl(valor) {
     return url.protocol === "http:" || url.protocol === "https:";
 }
 
+function EhHex(valor){
+    return /^#[0-9A-F]{6}$/i.test(valor);
+}
+
 function ExibeErro(campoInput, descricaoDoErro){
 	campoInput.parentElement.classList.add('erro-de-validacao');
 	campoInput.parentElement.querySelector('.mensagem-validacao').innerHTML = descricaoDoErro;
 }
+
+
