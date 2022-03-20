@@ -7,18 +7,18 @@ let listaDeQuizzesGlobal = [],
 iniciarSite();
 
 function iniciarSite() {
-	listaDeQuizzesGlobal = [];
-	listaDeQuizzesDoUsuario = [];
+	// listaDeQuizzesGlobal = [];
+	// listaDeQuizzesDoUsuario = [];
 	
-	document.querySelector(".quizzes-do-usuario-conteudo").style.display = "none";
-	document.querySelector(".sem-quizz-do-usuario").style.display = "flex";
+	// document.querySelector(".quizzes-do-usuario-conteudo").style.display = "none";
+	// document.querySelector(".sem-quizz-do-usuario").style.display = "flex";
 	
-	ExibirTela("loading");
+	//ExibirTela("loading");
 
-	const pObterQuizzes = ReqObterTodosQuizzes();
-	pObterQuizzes.then(obterTodosQuizzesSucesso);
+	// const pObterQuizzes = ReqObterTodosQuizzes();
+	// pObterQuizzes.then(obterTodosQuizzesSucesso);
 
-	//AbrirCriarQuizz();
+	IniciarQuizz();
 }
 
 function obterTodosQuizzesSucesso(resposta) {
@@ -45,6 +45,10 @@ function obterTodosQuizzesSucesso(resposta) {
 	}
 
 	ExibirTela("pagina-lista-quizzes");
+}
+
+function IniciarQuizz(){
+	ExibirTela("pagina-quizz");
 }
 
 function AbrirCriarQuizz() {

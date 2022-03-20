@@ -18,6 +18,7 @@
 		<link rel="stylesheet" href="./src/css/topo.css" />
 		<link rel="stylesheet" href="./src/css/loading.css" />
 		<link rel="stylesheet" href="./src/css/pagina-lista-quizzes.css" />
+		<link rel="stylesheet" href="./src/css/pagina-quizz.css" />
 		<link rel="stylesheet" href="./src/css/pagina-criar-quizz.css" />
 	</head>
 	<body>
@@ -47,24 +48,7 @@
 							<h1>Seus Quizzes</h2>
 							<ion-icon onclick="AbrirCriarQuizz()" name="add-circle"></ion-icon>
 						</div>
-						<div class="lista-quizzes">
-							<!-- <div class="quizz">
-								<div class="imagem-do-quizz grad">
-									<img
-										src="https://cdn.ome.lt/cjGB89sd8MuZlR6p8fkr72ZvkDw=/1200x630/smart/extras/conteudos/2019-11-30-OMELISTA-DQ.png"
-									/>
-								</div>
-								<div class="titulo-do-quizz">Star wars</div>
-							</div>
-							<div class="quizz">
-								<div class="imagem-do-quizz">
-									<img
-										src="https://i.pinimg.com/280x280_RS/cb/b2/80/cbb280fa8c687cf3b137df878bf82d08.jpg"
-									/>
-								</div>
-								<div class="titulo-do-quizz">ra ra ra</div>
-							</div> -->
-						</div>
+						<div class="lista-quizzes"></div>
 					</div>
 					<div class="sem-quizz-do-usuario">
 						<div>Você não criou nenhum quizz ainda :(</div>
@@ -75,29 +59,81 @@
 					<div class="titulo-h1">
 						<h1>Todos os Quizzes</h1>
 					</div>
-					<div class="lista-quizzes">
-						<!-- <div class="quizz">
-							<div class="imagem-do-quizz grad">
-								<img
-									src="https://cdn.ome.lt/cjGB89sd8MuZlR6p8fkr72ZvkDw=/1200x630/smart/extras/conteudos/2019-11-30-OMELISTA-DQ.png"
-								/>
-							</div>
-							<div class="titulo-do-quizz">Star wars</div>
-						</div>
-						<div class="quizz">
-							<div class="imagem-do-quizz">
-								<img
-									src="https://i.pinimg.com/280x280_RS/cb/b2/80/cbb280fa8c687cf3b137df878bf82d08.jpg"
-								/>
-							</div>
-							<div class="titulo-do-quizz">ra ra ra</div>
-						</div> -->
-					</div>
+					<div class="lista-quizzes"></div>
 				</div>
 			</div>
 		</div>
 
-		<div class="pagina-quizz">Página do quizz</div>
+		<div class="pagina-quizz">
+			<div class="banner">
+				<img src="https://cdn.ome.lt/cjGB89sd8MuZlR6p8fkr72ZvkDw=/1200x630/smart/extras/conteudos/2019-11-30-OMELISTA-DQ.png">
+				<div class="titulo-do-banner">Lorem ipsum dolor sit amet.</div>
+			</div>
+
+			<div class="perguntas">
+				<div class="pergunta">
+					<div class="texto-da-pergunta">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi suscipit corrupti iusto alias aut nihil.
+					</div>
+					<div class="lista-respostas respondido">
+						<div class="resposta correta selecionada">
+							<img src="https://cdn.ome.lt/cjGB89sd8MuZlR6p8fkr72ZvkDw=/1200x630/smart/extras/conteudos/2019-11-30-OMELISTA-DQ.png">
+							<p class="texto-resposta">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, autem.</p>
+						</div>
+						<div class="resposta">
+							<img src="https://cdn.ome.lt/cjGB89sd8MuZlR6p8fkr72ZvkDw=/1200x630/smart/extras/conteudos/2019-11-30-OMELISTA-DQ.png">
+							<p class="texto-resposta">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, autem.</p>
+						</div>
+					</div>
+				</div>
+	
+				<div class="pergunta">
+					<div class="texto-da-pergunta">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi suscipit corrupti iusto alias aut nihil.
+					</div>
+					<div class="lista-respostas respondido">
+						<div class="resposta">
+							<img src="https://cdn.ome.lt/cjGB89sd8MuZlR6p8fkr72ZvkDw=/1200x630/smart/extras/conteudos/2019-11-30-OMELISTA-DQ.png">
+							<p class="texto-resposta">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, autem.</p>
+						</div>
+						<div class="resposta selecionada">
+							<img src="https://cdn.ome.lt/cjGB89sd8MuZlR6p8fkr72ZvkDw=/1200x630/smart/extras/conteudos/2019-11-30-OMELISTA-DQ.png">
+							<p class="texto-resposta">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, autem.</p>
+						</div>
+						<div class="resposta correta">
+							<img src="https://cdn.ome.lt/cjGB89sd8MuZlR6p8fkr72ZvkDw=/1200x630/smart/extras/conteudos/2019-11-30-OMELISTA-DQ.png">
+							<p class="texto-resposta">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, autem.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="pergunta">
+					<div class="texto-da-pergunta">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi suscipit corrupti iusto alias aut nihil.
+					</div>
+					<div class="lista-respostas">
+						<div class="resposta">
+							<img src="https://cdn.ome.lt/cjGB89sd8MuZlR6p8fkr72ZvkDw=/1200x630/smart/extras/conteudos/2019-11-30-OMELISTA-DQ.png">
+							<p class="texto-resposta">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, autem.</p>
+						</div>
+						<div class="resposta">
+							<img src="https://cdn.ome.lt/cjGB89sd8MuZlR6p8fkr72ZvkDw=/1200x630/smart/extras/conteudos/2019-11-30-OMELISTA-DQ.png">
+							<p class="texto-resposta">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, autem.</p>
+						</div>
+						<div class="resposta correta">
+							<img src="https://cdn.ome.lt/cjGB89sd8MuZlR6p8fkr72ZvkDw=/1200x630/smart/extras/conteudos/2019-11-30-OMELISTA-DQ.png">
+							<p class="texto-resposta">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, autem.</p>
+						</div>
+						<div class="resposta">
+							<img src="https://cdn.ome.lt/cjGB89sd8MuZlR6p8fkr72ZvkDw=/1200x630/smart/extras/conteudos/2019-11-30-OMELISTA-DQ.png">
+							<p class="texto-resposta">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, autem.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="resultado"></div>
+		</div>
 
 		<div class="pagina-criar-quizz">
 			<div class="etapa etapa1">
@@ -160,85 +196,6 @@
 			<div class="etapa etapa3">
 				<h1>Agora, decida os níveis</h1>
 				<div class="form-conteudo etapa etapa-niveis-conteudo"></div>
-				<!-- <form id="Nivel1" class="form-etapa">
-					<div class="subtitulo-esquerda colapsavel">
-						<h2>Nível 1</h2>
-						<div class="icones-para-colapsar">
-							<ion-icon name="caret-down-outline"></ion-icon>
-							<ion-icon class="nao-visivel" name="caret-up-outline"></ion-icon>
-						</div>
-					</div>
-					<div class="conteudo-colapsavel">
-						<div class="form-input">
-							<input  id="TituloDoNivel"
-									name="TituloDoNivel"
-									type="text"
-									placeholder="Título do nível"/>
-						</div>
-
-						<div class="form-input">
-							<input  id="PorcentagemDeAcertoMinima"
-									name="PorcentagemDeAcertoMinima"
-									type="text"
-									placeholder="% de acerto mínima"/>
-						</div>
-
-						<div class="form-input">
-							<input  id="UrlDaImagemDoNivel"
-									name="UrlDaImagemDoNivel"
-									type="text"
-									placeholder="URL da imagem do nível"/>
-						</div>
-
-						<div class="form-input">
-							<input  id="DescricaoDoNivel"
-									name="DescricaoDoNivel"
-									type="text"
-									placeholder="Descrição do nível"/>
-						</div>
-						
-					</div>
-				</form>
-
-				<form id="Nivel2" class="form-etapa">
-					<div class="subtitulo-esquerda colapsavel">
-						<h2>Nível 2</h2>
-						<div class="icones-para-colapsar">
-							<ion-icon name="caret-down-outline"></ion-icon>
-							<ion-icon class="nao-visivel" name="caret-up-outline"></ion-icon>
-						</div>
-					</div>
-					<div class="conteudo-colapsavel">
-						<div class="form-input">
-							<input  id="TituloDoNivel"
-									name="TituloDoNivel"
-									type="text"
-									placeholder="Título do nível"/>
-						</div>
-
-						<div class="form-input">
-							<input  id="PorcentagemDeAcertoMinima"
-									name="PorcentagemDeAcertoMinima"
-									type="text"
-									placeholder="% de acerto mínima"/>
-						</div>
-
-						<div class="form-input">
-							<input  id="UrlDaImagemDoNivel"
-									name="UrlDaImagemDoNivel"
-									type="text"
-									placeholder="URL da imagem do nível"/>
-						</div>
-
-						<div class="form-input">
-							<input  id="DescricaoDoNivel"
-									name="DescricaoDoNivel"
-									type="text"
-									placeholder="Descrição do nível"/>
-						</div>
-						
-					</div>
-				</form> -->
 
 				<button onclick="FinalizarCriacaoQuizz()" class="btn btn-principal">
 					Finalizar Quizz
@@ -265,24 +222,5 @@
 		<script src="./src/scripts/renderizador.js"></script>
 		<script src="./src/scripts/request.js"></script>
 		<script src="./src/scripts/index.js"></script>
-		<!-- <script>
-			const coll = document.getElementsByClassName("colapsavel");
-			
-			for (let i = 0; i < coll.length; i++) {
-			  coll[i].addEventListener("click", function() {
-				
-				this.querySelectorAll("ion-icon").forEach(e => {
-					e.classList.toggle("nao-visivel");
-				});
-
-				const content = this.nextElementSibling;
-				if (content.style.maxHeight){
-				  content.style.maxHeight = null;
-				} else {
-				  content.style.maxHeight = content.scrollHeight + "px";
-				} 
-			  });
-			}
-			</script> -->
 	</body>
 </html>
