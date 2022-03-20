@@ -11,7 +11,7 @@ function RenderizarQuizz(divListaQuizzes, quizz) {
 	let htmlQuizz = `<div id="${quizz.id}" class="quizz">
     <div class="imagem-do-quizz">
         <img
-            src="${quizz.iamge}"
+            src="${quizz.image}"
         />
     </div>
     <div class="titulo-do-quizz">${quizz.title}</div>

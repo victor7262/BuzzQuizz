@@ -1,8 +1,8 @@
 html,
 body {
 	font-family: "Roboto", sans-serif;
-	/* background-color: #fafafa; */
-	background-color: lightgray;
+	background-color: #fafafa;
+	/* background-color: lightgray; */
 }
 
 .loading {
@@ -58,6 +58,7 @@ form{
 	text-align: center;
 
 	border: none;
+	cursor: pointer;
 
 	font-style: normal;
 	font-weight: 400;
@@ -65,26 +66,34 @@ form{
 	font-size: 21px;
 	line-height: 25px;
 
-	cursor: pointer;
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 .btn-principal {
 	border-radius: 15px;
 	height: 54px;
 	
-	font-size: 21px;
-	line-height: 25px;
-
 	background: #ec362d;
 	color: #fff5f4;
 }
 
 .btnSemPrioridade{	
 	color: #818181;
-	background-color: lightgray;
+	background-color: #fafafa;
 	border: none;
 	
 	margin-top: 9px;
+}
+
+.btn-tracejado{
+	height: 40px;
+
+	color: #ec362d;
+	background: #fafafa;
+	border: 1px dashed #ec362d;
+	box-sizing: border-box;
+	border-radius: 50px;
 }
 
 input {

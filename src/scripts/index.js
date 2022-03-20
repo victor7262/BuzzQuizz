@@ -7,27 +7,42 @@ let listaDeQuizzesGlobal = [],
 iniciarSite();
 
 function iniciarSite() {
+	listaDeQuizzesGlobal = [];
+	listaDeQuizzesDoUsuario = [];
+	
+	document.querySelector(".quizzes-do-usuario-conteudo").style.display = "none";
+	document.querySelector(".sem-quizz-do-usuario").style.display = "flex";
+	
 	ExibirTela("loading");
-	obterTodosQuizzes();
+
+	const pObterQuizzes = ReqObterTodosQuizzes();
+	pObterQuizzes.then(obterTodosQuizzesSucesso);
 
 	//AbrirCriarQuizz();
 }
 
-function obterTodosQuizzes() {
-	const pObterQuizzes = ReqObterTodosQuizzes();
-	pObterQuizzes.then(obterTodosQuizzesSucesso);
-}
-
 function obterTodosQuizzesSucesso(resposta) {
-	const divListaQuizzes = document.querySelector(
-		".todos-quizzes .lista-quizzes"
-	);
+	const divListaQuizzes = document.querySelector(".todos-quizzes .lista-quizzes");
+	const divListaQuizzesDoUsuario = document.querySelector(".quizzes-do-usuario .lista-quizzes");
 
+	divListaQuizzes.innerHTML = '';
+	divListaQuizzesDoUsuario.innerHTML = '';
+	
+	listaDeQuizzesDoUsuario = ObterArrQuizzLocal();
 	listaDeQuizzesGlobal = resposta.data;
-
+	
 	listaDeQuizzesGlobal.forEach((element) => {
 		RenderizarQuizz(divListaQuizzes, element);
 	});
+
+	if (listaDeQuizzesDoUsuario.length > 0){
+		listaDeQuizzesDoUsuario.forEach((element) => {
+			RenderizarQuizz(divListaQuizzesDoUsuario, element);
+		});
+
+		document.querySelector(".quizzes-do-usuario-conteudo").style.display = "flex";
+		document.querySelector(".sem-quizz-do-usuario").style.display = "none";
+	}
 
 	ExibirTela("pagina-lista-quizzes");
 }

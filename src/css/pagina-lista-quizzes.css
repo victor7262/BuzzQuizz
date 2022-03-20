@@ -25,7 +25,7 @@
 }
 
 .quizzes-do-usuario-conteudo {
-	display: flex;
+	display: none;
 	flex-direction: column;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .sem-quizz-do-usuario {
-	display: none;
+	display: flex;
 	width: 100%;
 	height: 181px;
 	flex-direction: column;
@@ -58,21 +58,6 @@
 	text-align: center;
 
 	color: #b9b9b9;
-}
-
-.sem-quizz-do-usuario button {
-	width: 151px;
-	height: 40px;
-	font-size: 21px;
-	line-height: 25px;
-
-	text-align: center;
-
-	color: #ec362d;
-	background: #fafafa;
-	border: 1px dashed #ec362d;
-	box-sizing: border-box;
-	border-radius: 50px;
 }
 
 .pagina-lista-quizzes .pagina-lista-quizzes-conteudo .todos-quizzes {
