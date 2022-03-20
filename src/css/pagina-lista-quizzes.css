@@ -94,43 +94,7 @@
 	padding-top: 15px;
 }
 
-.lista-quizzes .quizz .imagem-do-quizz {
-	position: relative;
-}
 
-.lista-quizzes .quizz .imagem-do-quizz::after {
-	content: "";
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	left: 0;
-	bottom: 10;
-	width: 100%;
-	height: 181px;
-	background: linear-gradient(
-		to top,
-		rgba(0, 0, 0, 0.7),
-		rgba(255, 255, 255, 0) 70%
-	);
-	border-radius: 5px;
-}
-
-.lista-quizzes .quizz img {
-	width: 340px;
-	height: 181px;
-	border-radius: 5px;
-}
-
-.lista-quizzes .quizz .titulo-do-quizz {
-	position: absolute;
-	bottom: 0px;
-	width: 95%;
-	font-size: 19px;
-	z-index: 999;
-	color: #ffffff;
-	display: flex;
-	padding: 10px 20px;
-}
 
 @media (max-width: 1100px) {
 	.pagina-lista-quizzes .pagina-lista-quizzes-conteudo {

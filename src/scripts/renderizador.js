@@ -47,6 +47,7 @@ function RenderizarEtapa2(quantidade){
 
 	divEtapa1.style.display = "none";
 	divEtapa2.style.display = "flex";
+	divConteudo.innerHTML = '';
 
 	renderizarPerguntasParaCriacao(divConteudo, quantidade);
 	adicionarEventoParaItensColapsaveis();
@@ -170,7 +171,8 @@ function RenderizarEtapa3(quantidade){
 
 	divEtapa2.style.display = "none";
 	divEtapa3.style.display = "flex";
-
+	divConteudo.innerHTML = '';
+	
 	renderizarNiveisParaCriacao(divConteudo, quantidade);
 	adicionarEventoParaItensColapsaveis();
 }
@@ -191,6 +193,7 @@ function renderizarNiveisParaCriacao(divConteudo, quantidade){
 			<input  id="TituloDoNivel"
 					name="TituloDoNivel"
 					type="text"
+					value="1234567890asd"
 					placeholder="Título do nível"/>
 					<div class="mensagem-validacao"></div>
 		</div>
@@ -199,6 +202,7 @@ function renderizarNiveisParaCriacao(divConteudo, quantidade){
 			<input  id="PorcentagemDeAcertoMinima"
 					name="PorcentagemDeAcertoMinima"
 					type="text"
+					value="0"
 					placeholder="% de acerto mínima"/>
 					<div class="mensagem-validacao"></div>
 		</div>
@@ -207,6 +211,7 @@ function renderizarNiveisParaCriacao(divConteudo, quantidade){
 			<input  id="UrlDaImagemDoNivel"
 					name="UrlDaImagemDoNivel"
 					type="text"
+					value="https://jahskjdhjka.com"
 					placeholder="URL da imagem do nível"/>
 					<div class="mensagem-validacao"></div>
 		</div>
@@ -215,6 +220,7 @@ function renderizarNiveisParaCriacao(divConteudo, quantidade){
 			<input  id="DescricaoDoNivel"
 					name="DescricaoDoNivel"
 					type="text"
+					value="klsdjf klsjdfkl jsdklf jklsdj fkljsd kljs dfklsujd fkljsd "
 					placeholder="Descrição do nível"/>
 					<div class="mensagem-validacao"></div>
 		</div>
@@ -222,4 +228,22 @@ function renderizarNiveisParaCriacao(divConteudo, quantidade){
 	</div>
 </form>`;
 	}
+}
+
+function RenderizarEtapa4(quizz){
+	const divEtapa3 = document.querySelector('.etapa3'); 
+	const divEtapa4 = document.querySelector('.etapa4');
+	const divConteudo  = document.querySelector('.etapa-quizz-pronto-conteudo');
+
+	divEtapa3.style.display = "none";
+	divEtapa4.style.display = "flex";
+
+	divConteudo.innerHTML = `<div class="form-etapa">
+	<div class="imagem-do-quizz grad">
+		<img
+			src="${quizz.image}"
+		/>
+	</div>
+	<div class="titulo-do-quizz">${quizz.title}</div>
+</div>`;
 }

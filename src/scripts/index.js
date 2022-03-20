@@ -78,7 +78,7 @@ function etapa1EhValida() {
 		ehValido = false;
 	}
 
-	if (!EhUrl(imagem.value)){
+	if (!EhImagemValida(imagem.value)){
 		ExibeErro(imagem, "Esse campo deve estar no formato URL");
 		ehValido = false;
 	}
@@ -225,7 +225,7 @@ function validaParRespostaEImagem(resposta, imagem, camposObrigatorios){
 			ehValido = false;
 		}
 
-		if (!EhUrl(imagem.value)){
+		if (!EhImagemValida(imagem.value)){
 			ExibeErro(imagem, "Esse campo deve estar no formato URL");
 			ehValido = false;
 		}
@@ -239,7 +239,7 @@ function validaParRespostaEImagem(resposta, imagem, camposObrigatorios){
 			ExibeErro(resposta, "Caso informe a imagem, é necessário informar a resposota");
 			ehValido = false;
 
-			if (!EhUrl(imagem.value)){
+			if (!EhImagemValida(imagem.value)){
 				ExibeErro(imagem, "Esse campo deve estar no formato URL");
 				ehValido = false;
 			}
@@ -273,7 +273,9 @@ function FinalizarCriacaoQuizz(){
 			quizzEmCriacao.levels.push(level);
 		});
 		
-		alert("agora é só enviar");
+		const pCriarQuizz = ReqCriarQuizz(quizzEmCriacao);
+		pCriarQuizz.then(criarQuizzSucesso);
+		pCriarQuizz.catch(criarQuizzErro);
 	}	
 }
 
@@ -314,7 +316,7 @@ function etapa3EhValida(){
 			ehValido = false;
 		} else if (porcentagemDeAcertoMinima.value == 0) existeNivelComPorcentagemZero = true;
 
-		if (!EhUrl(imagemDoNivel.value)){
+		if (!EhImagemValida(imagemDoNivel.value)){
 			ExibeErro(imagemDoNivel, "Esse campo deve estar no formato URL");
 			ehValido = false;
 		}
@@ -335,4 +337,14 @@ function etapa3EhValida(){
 	}
 
 	return ehValido;
+}
+
+function criarQuizzSucesso(resultado){
+	GuardarQuizzLocal(resultado.data);
+	RenderizarEtapa4(resultado.data);
+}
+
+function criarQuizzErro(resultado){
+	console.log(resultado);
+	alert("Ops");
 }

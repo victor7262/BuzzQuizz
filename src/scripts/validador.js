@@ -21,7 +21,7 @@ function EhNumeroValido(valor, valorMinimo, valorMaximo){
         return false;
 }
 
-function EhUrl(valor) {
+function EhImagemValida(valor) {
     let url;
     
     try {

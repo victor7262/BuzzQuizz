@@ -22,7 +22,7 @@
 	</head>
 	<body>
 		<div class="topo">
-			<div class="topo-conteudo">BuzzQuizz</div>
+			<div onclick="iniciarSite()" class="topo-conteudo">BuzzQuizz</div>
 		</div>
 		<div class="loading">
 			<div class="loadingio-spinner-spin-3h2wgx02yzb">
@@ -103,44 +103,46 @@
 			<div class="etapa etapa1">
 				<h1>Comece pelo começo</h1>
 
-				<form id="formEtapa1" class="form-etapa">
-					<div class="form-input">
-						<input  id="TituloQuizz"
-								name="TituloQuizz"
-								type="text"
-								value="titulo do quizz aaaaaaaa"
-								placeholder="Título do seu quizz">
-						<div class="mensagem-validacao"></div>
-						
-					</div>
-
-					<div class="form-input">
-						<input  id="ImagemQuizz"
-								name="ImagemQuizz"
-								type="url"
-								value="https://jksdhfkjhsdjk.com/sfhdjsfd.jpg"
-								placeholder="URL da imagem do seu quizz">
-						<div class="mensagem-validacao"></div>
-					</div>
-
-					<div class="form-input">
-						<input  id="QuantidadeDePerguntas"
-								name="QuantidadeDePerguntas"
-								type="url"
-								value="3"
-								placeholder="Quantidade de perguntas do quizz">
-						<div class="mensagem-validacao"></div>
-					</div>
-
-					<div class="form-input">
-						<input  id="QuantidadeDeNiveis"
-								name="QuantidadeDeNiveis"
-								type="text"
-								value="2"
-								placeholder="Quantidade de níveis do quizz">
-						<div class="mensagem-validacao"></div>
-					</div>
-				</form>
+				<div class="form-conteudo etapa">
+					<form id="formEtapa1" class="form-etapa">
+						<div class="form-input">
+							<input  id="TituloQuizz"
+									name="TituloQuizz"
+									type="text"
+									value="Star wars akjshdjkahs dhas"
+									placeholder="Título do seu quizz">
+							<div class="mensagem-validacao"></div>
+							
+						</div>
+	
+						<div class="form-input">
+							<input  id="ImagemQuizz"
+									name="ImagemQuizz"
+									type="url"
+									value="https://cdn.ome.lt/cjGB89sd8MuZlR6p8fkr72ZvkDw=/1200x630/smart/extras/conteudos/2019-11-30-OMELISTA-DQ.png"
+									placeholder="URL da imagem do seu quizz">
+							<div class="mensagem-validacao"></div>
+						</div>
+	
+						<div class="form-input">
+							<input  id="QuantidadeDePerguntas"
+									name="QuantidadeDePerguntas"
+									type="url"
+									value="3"
+									placeholder="Quantidade de perguntas do quizz">
+							<div class="mensagem-validacao"></div>
+						</div>
+	
+						<div class="form-input">
+							<input  id="QuantidadeDeNiveis"
+									name="QuantidadeDeNiveis"
+									type="text"
+									value="2"
+									placeholder="Quantidade de níveis do quizz">
+							<div class="mensagem-validacao"></div>
+						</div>
+					</form>
+				</div>
 
 				<button onclick="ProsseguirParaCriarPerguntas()" class="btn btn-principal">
 					Prosseguir para criar peguntas
@@ -149,7 +151,7 @@
 
 			<div class="etapa etapa2">
 				<h1>Crie suas perguntas</h1>
-				<div class="etapa etapa-pergunta-conteudo"></div>
+				<div class="form-conteudo etapa-pergunta-conteudo"></div>
 				<button onclick="ProsseguirParaCriarNiveis()" class="btn btn-principal">
 					Prosseguir para criar níveis
 				</button>
@@ -157,7 +159,7 @@
 
 			<div class="etapa etapa3">
 				<h1>Agora, decida os níveis</h1>
-				<div class="etapa etapa-niveis-conteudo"></div>
+				<div class="form-conteudo etapa-niveis-conteudo"></div>
 				<!-- <form id="Nivel1" class="form-etapa">
 					<div class="subtitulo-esquerda colapsavel">
 						<h2>Nível 1</h2>
@@ -243,16 +245,22 @@
 				</button>
 			</div>
 			<div class="etapa etapa4">
-				<h1>Crie suas perguntas</h1>
-				<div class="etapa etapa-pergunta-conteudo"></div>
-				<button onclick="ProsseguirParaCriarNiveis()" class="btn btn-principal">
-					Prosseguir para criar níveis
+				<h1>Seu quizz está pronto!</h1>
+				<div class="form-conteudo etapa-quizz-pronto-conteudo"></div>
+
+				<button onclick="AcessarQuizz()" class="btn btn-principal">
+					Acessar Quizz
+				</button>
+
+				<button onclick="iniciarSite()" class="btn btnSemPrioridade">
+					Voltar para home
 				</button>
 			</div>
 		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 		<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+		<script src="./src/scripts/controlaLocalStorage.js"></script>
 		<script src="./src/scripts/validador.js"></script>
 		<script src="./src/scripts/renderizador.js"></script>
 		<script src="./src/scripts/request.js"></script>

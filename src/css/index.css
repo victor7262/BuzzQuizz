@@ -52,19 +52,39 @@ form{
 	background-color: #ffffff;
 }
 
-.btn-principal {
-	background: #ec362d;
-	border-radius: 15px;
-	height: 54px;
+.btn{
+	display: flex;
+	align-items: center;
+	text-align: center;
 
 	border: none;
 
 	font-style: normal;
 	font-weight: 400;
+	height: 44px;
 	font-size: 21px;
 	line-height: 25px;
 
+	cursor: pointer;
+}
+
+.btn-principal {
+	border-radius: 15px;
+	height: 54px;
+	
+	font-size: 21px;
+	line-height: 25px;
+
+	background: #ec362d;
 	color: #fff5f4;
+}
+
+.btnSemPrioridade{	
+	color: #818181;
+	background-color: lightgray;
+	border: none;
+	
+	margin-top: 9px;
 }
 
 input {
@@ -132,4 +152,44 @@ input {
 
 .form-etapa.erro-de-validacao{
 	border: 1px solid #ec362d;
+}
+
+.imagem-do-quizz {
+	position: relative;
+	cursor: pointer;
+}
+
+.imagem-do-quizz::after {
+	content: "";
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: 0;
+	bottom: 3px;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		to top,
+		rgba(0, 0, 0, 0.7),
+		rgba(255, 255, 255, 0) 70%
+	);
+	border-radius: 5px;
+}
+
+.imagem-do-quizz img {
+	width: 340px;
+	height: 181px;
+	border-radius: 5px;
+}
+
+.titulo-do-quizz {
+	position: absolute;
+	bottom: 0px;
+	width: 95%;
+	font-size: 19px;
+	z-index: 999;
+	color: #ffffff;
+	display: flex;
+	padding: 10px 20px;
+	cursor: pointer;
 }
