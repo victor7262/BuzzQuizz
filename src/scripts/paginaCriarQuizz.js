@@ -1,56 +1,3 @@
-let listaDeQuizzesGlobal = [],
-	listaDeQuizzesDoUsuario = [],
-	quizzEmCriacao = null,
-	quantidadeDePerguntas = 0,
-	quantidadeDeNiveis = 0;
-
-iniciarSite();
-
-function iniciarSite() {
-	// listaDeQuizzesGlobal = [];
-	// listaDeQuizzesDoUsuario = [];
-	
-	// document.querySelector(".quizzes-do-usuario-conteudo").style.display = "none";
-	// document.querySelector(".sem-quizz-do-usuario").style.display = "flex";
-	
-	//ExibirTela("loading");
-
-	// const pObterQuizzes = ReqObterTodosQuizzes();
-	// pObterQuizzes.then(obterTodosQuizzesSucesso);
-
-	IniciarQuizz();
-}
-
-function obterTodosQuizzesSucesso(resposta) {
-	const divListaQuizzes = document.querySelector(".todos-quizzes .lista-quizzes");
-	const divListaQuizzesDoUsuario = document.querySelector(".quizzes-do-usuario .lista-quizzes");
-
-	divListaQuizzes.innerHTML = '';
-	divListaQuizzesDoUsuario.innerHTML = '';
-	
-	listaDeQuizzesDoUsuario = ObterArrQuizzLocal();
-	listaDeQuizzesGlobal = resposta.data;
-	
-	listaDeQuizzesGlobal.forEach((element) => {
-		RenderizarQuizz(divListaQuizzes, element);
-	});
-
-	if (listaDeQuizzesDoUsuario.length > 0){
-		listaDeQuizzesDoUsuario.forEach((element) => {
-			RenderizarQuizz(divListaQuizzesDoUsuario, element);
-		});
-
-		document.querySelector(".quizzes-do-usuario-conteudo").style.display = "flex";
-		document.querySelector(".sem-quizz-do-usuario").style.display = "none";
-	}
-
-	ExibirTela("pagina-lista-quizzes");
-}
-
-function IniciarQuizz(){
-	ExibirTela("pagina-quizz");
-}
-
 function AbrirCriarQuizz() {
 	document.querySelector('.etapa1').style.display = "flex";
 	document.querySelector('.etapa2').style.display = "none";
@@ -366,4 +313,201 @@ function criarQuizzSucesso(resultado){
 function criarQuizzErro(resultado){
 	console.log(resultado);
 	alert("Ops");
+}
+
+function RenderizarEtapa2(quantidade){
+	const divEtapa1 = document.querySelector('.etapa1'); 
+	const divEtapa2 = document.querySelector('.etapa2');
+	const divConteudo  = document.querySelector('.etapa-pergunta-conteudo');
+
+	divEtapa1.style.display = "none";
+	divEtapa2.style.display = "flex";
+	divConteudo.innerHTML = '';
+
+	renderizarPerguntasParaCriacao(divConteudo, quantidade);
+	adicionarEventoParaItensColapsaveis();
+}
+
+function renderizarPerguntasParaCriacao(divConteudo, quantidade){
+	for (let index = 1; index <= quantidade; index++) {
+		divConteudo.innerHTML += `
+<form id="pergunta${index}" class="form-etapa">
+	<div class="subtitulo-esquerda colapsavel">
+		<h2>Pergunta ${index}</h2>
+		<div class="icones-para-colapsar">
+			<ion-icon name="caret-down-outline"></ion-icon>
+			<ion-icon class="nao-visivel" name="caret-up-outline"></ion-icon>
+		</div>
+	</div>
+	<div class="conteudo-colapsavel">
+		<div class="form-input">
+			<input  id="TextoDaPergunta"
+					name="TextoDaPergunta"
+					type="text"
+					placeholder="Texto da pergunta"/>
+			<div class="mensagem-validacao"></div>
+		</div>
+		<div class="form-input">
+			<input  id="CorDeFundoDaPergunta"
+					name="CorDeFundoDaPergunta"
+					type="text"
+					value="#"
+					placeholder="Cor de fundo da pergunta"/>
+			<div class="mensagem-validacao"></div>
+		</div>
+		
+		<div class="subtitulo-esquerda">
+			<h2>Resposta correta</h2>
+		</div>
+
+		<div class="form-input">
+			<input  id="RespostaCorreta"
+					name="RespostaCorreta"
+					type="text"
+					placeholder="Resposta correta"/>
+			<div class="mensagem-validacao"></div>
+		</div>
+		<div class="form-input">
+			<input  id="URLDaImagem"
+					name="URLDaImagem"
+					type="text"
+					placeholder="URL da imagem"/>
+			<div class="mensagem-validacao"></div>
+		</div>
+
+		<div class="subtitulo-esquerda">
+			<h2>Respostas incorretas</h2>
+		</div>
+
+		<div class="form-input">
+			<input  id="RespostaIncorreta1"
+					name="RespostaIncorreta1"
+					type="text"
+					placeholder="Resposta incorreta 1"/>
+			<div class="mensagem-validacao"></div>
+		</div>
+		<div class="form-input">
+			<input  id="URLDaImagem1"
+					name="URLDaImagem1"
+					type="text"
+					placeholder="URL da imagem 1"/>
+			<div class="mensagem-validacao"></div>
+		</div>
+
+		<div class="espacador"></div>
+
+		<div class="form-input">
+			<input  id="RespostaIncorreta2"
+					name="RespostaIncorreta2"
+					type="text"
+					placeholder="Resposta incorreta 2"/>
+			<div class="mensagem-validacao"></div>
+		</div>
+		<div class="form-input">
+			<input  id="URLDaImagem2"
+					name="URLDaImagem2"
+					type="text"
+					placeholder="URL da imagem 2"/>
+			<div class="mensagem-validacao"></div>
+		</div>
+
+		<div class="espacador"></div>
+
+		<div class="form-input">
+			<input  id="RespostaIncorreta3"
+					name="RespostaIncorreta3"
+					type="text"
+					placeholder="Resposta incorreta 3"/>
+			<div class="mensagem-validacao"></div>
+		</div>
+		<div class="form-input">
+			<input  id="URLDaImagem3"
+					name="URLDaImagem3"
+					type="text"
+					placeholder="URL da imagem 3"/>
+			<div class="mensagem-validacao"></div>
+		</div>
+	</div>
+</form>`;
+	}
+}
+
+function RenderizarEtapa3(quantidade){
+	const divEtapa2 = document.querySelector('.etapa2'); 
+	const divEtapa3 = document.querySelector('.etapa3');
+	const divConteudo  = document.querySelector('.etapa-niveis-conteudo');
+
+	divEtapa2.style.display = "none";
+	divEtapa3.style.display = "flex";
+	divConteudo.innerHTML = '';
+	
+	renderizarNiveisParaCriacao(divConteudo, quantidade);
+	adicionarEventoParaItensColapsaveis();
+}
+
+function renderizarNiveisParaCriacao(divConteudo, quantidade){
+	for (let index = 1; index <= quantidade; index++) {
+		divConteudo.innerHTML += `
+<form id="Nivel${index}" class="form-etapa">
+	<div class="subtitulo-esquerda colapsavel">
+		<h2>Nível ${index}</h2>
+		<div class="icones-para-colapsar">
+			<ion-icon name="caret-down-outline"></ion-icon>
+			<ion-icon class="nao-visivel" name="caret-up-outline"></ion-icon>
+		</div>
+	</div>
+	<div class="conteudo-colapsavel">
+		<div class="form-input">
+			<input  id="TituloDoNivel"
+					name="TituloDoNivel"
+					type="text"
+					placeholder="Título do nível"/>
+					<div class="mensagem-validacao"></div>
+		</div>
+
+		<div class="form-input">
+			<input  id="PorcentagemDeAcertoMinima"
+					name="PorcentagemDeAcertoMinima"
+					type="text"
+					placeholder="% de acerto mínima"/>
+					<div class="mensagem-validacao"></div>
+		</div>
+
+		<div class="form-input">
+			<input  id="UrlDaImagemDoNivel"
+					name="UrlDaImagemDoNivel"
+					type="text"
+					placeholder="URL da imagem do nível"/>
+					<div class="mensagem-validacao"></div>
+		</div>
+
+		<div class="form-input">
+			<input  id="DescricaoDoNivel"
+					name="DescricaoDoNivel"
+					type="text"
+					placeholder="Descrição do nível"/>
+					<div class="mensagem-validacao"></div>
+		</div>
+		
+	</div>
+</form>`;
+	}
+}
+
+function RenderizarEtapa4(quizz){
+	const divEtapa3 = document.querySelector('.etapa3'); 
+	const divEtapa4 = document.querySelector('.etapa4');
+	const divConteudo  = document.querySelector('.etapa-quizz-pronto-conteudo');
+
+	divEtapa3.style.display = "none";
+	divEtapa4.style.display = "flex";
+
+	divConteudo.innerHTML = `<div class="form-etapa">
+	<div class="imagem-do-quizz grad">
+		<img
+			src="${quizz.image}"
+		/>
+	</div>
+	<div class="titulo-do-quizz">${quizz.title}</div>
+</div>`;
 }

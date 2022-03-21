@@ -66,12 +66,12 @@
 
 		<div class="pagina-quizz">
 			<div class="banner">
-				<img src="https://cdn.ome.lt/cjGB89sd8MuZlR6p8fkr72ZvkDw=/1200x630/smart/extras/conteudos/2019-11-30-OMELISTA-DQ.png">
-				<div class="titulo-do-banner">Lorem ipsum dolor sit amet.</div>
+				<!-- <img src="https://cdn.ome.lt/cjGB89sd8MuZlR6p8fkr72ZvkDw=/1200x630/smart/extras/conteudos/2019-11-30-OMELISTA-DQ.png">
+				<div class="titulo-do-banner">Lorem ipsum dolor sit amet.</div> -->
 			</div>
 
-			<div class="perguntas">
-				<div class="pergunta">
+			<div class="perguntas form-pagina-quizz">
+				<!-- <div class="pergunta">
 					<div class="texto-da-pergunta">
 						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi suscipit corrupti iusto alias aut nihil.
 					</div>
@@ -129,10 +129,11 @@
 							<p class="texto-resposta">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, autem.</p>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
-
-			<div class="resultado"></div>
+			<div class="resultado form-pagina-quizz">
+				
+			</div>
 		</div>
 
 		<div class="pagina-criar-quizz">
@@ -145,7 +146,6 @@
 							<input  id="TituloQuizz"
 									name="TituloQuizz"
 									type="text"
-									value="Star wars akjshdjkahs dhas"
 									placeholder="Título do seu quizz">
 							<div class="mensagem-validacao"></div>
 							
@@ -155,7 +155,6 @@
 							<input  id="ImagemQuizz"
 									name="ImagemQuizz"
 									type="url"
-									value="https://cdn.ome.lt/cjGB89sd8MuZlR6p8fkr72ZvkDw=/1200x630/smart/extras/conteudos/2019-11-30-OMELISTA-DQ.png"
 									placeholder="URL da imagem do seu quizz">
 							<div class="mensagem-validacao"></div>
 						</div>
@@ -164,7 +163,6 @@
 							<input  id="QuantidadeDePerguntas"
 									name="QuantidadeDePerguntas"
 									type="url"
-									value="3"
 									placeholder="Quantidade de perguntas do quizz">
 							<div class="mensagem-validacao"></div>
 						</div>
@@ -173,7 +171,6 @@
 							<input  id="QuantidadeDeNiveis"
 									name="QuantidadeDeNiveis"
 									type="text"
-									value="2"
 									placeholder="Quantidade de níveis do quizz">
 							<div class="mensagem-validacao"></div>
 						</div>
@@ -217,10 +214,11 @@
 
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 		<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-		<script src="./src/scripts/controlaLocalStorage.js"></script>
 		<script src="./src/scripts/validador.js"></script>
-		<script src="./src/scripts/renderizador.js"></script>
 		<script src="./src/scripts/request.js"></script>
-		<script src="./src/scripts/index.js"></script>
+		<script src="./src/scripts/paginaCriarQuizz.js"></script>
+		<script src="./src/scripts/paginaQuizz.js"></script>
+		<script src="./src/scripts/paginaListaDeQuizzes.js"></script>
+		<script src="./src/scripts/comum.js"></script>
 	</body>
 </html>
