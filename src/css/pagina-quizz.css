@@ -1,22 +1,23 @@
 .pagina-quizz {
 	display: flex;
-    flex-direction: column;
-    justify-content: center;
+	flex-direction: column;
+	justify-content: center;
 	width: 100%;
 	padding-top: 69px;
+	margin-bottom: 69px;
 }
 
-.banner{
-    width: auto;
-    height: 227px;
-    position: relative;
+.banner {
+	width: auto;
+	height: 227px;
+	position: relative;
 }
 
-.banner img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    object-position: 100% 0;
+.banner img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 100% 0;
 }
 
 .banner::after {
@@ -38,25 +39,24 @@
 
 .titulo-do-banner {
 	position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	z-index: 999;
 	color: #ffffff;
-	display: flex;	
+	display: flex;
 
-    font-size: 39px;
-    line-height: 46px;
-    align-items: center;
-    text-align: center;
-
+	font-size: 39px;
+	line-height: 46px;
+	align-items: center;
+	text-align: center;
 }
 
-.form-pagina-quizz{
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 759px;
+.form-pagina-quizz {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	width: 759px;
 }
 
 .etapa {
@@ -67,86 +67,89 @@
 	align-items: center;
 }
 
-
-.form-conteudo-pagina-quizz{
-    width: 100%;
-    height: 100%;
-    margin-top: 42px;
-    background-color: #ffffff;
-    padding: 28px 35px;
+.form-conteudo-pagina-quizz {
+	width: 100%;
+	height: 100%;
+	margin-top: 42px;
+	background-color: #ffffff;
+	padding: 28px 35px;
 }
 
-.texto-cabecalho{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
+.texto-cabecalho {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
 
-    height: 138px;
-    background-color: #ec362d;
+	height: 138px;
+	background-color: #ec362d;
 
-    font-weight: 700;
-    font-size: 23px;
-    line-height: 27px;
-    
-    color: #FFFFFF;
+	font-weight: 700;
+	font-size: 23px;
+	line-height: 27px;
 
-    text-align: center;
+	color: #ffffff;
+
+	text-align: center;
 }
 
-.grid-pagina-quizz{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    width: 100%;
+.grid-pagina-quizz {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 25px;
+	width: 100%;
+
+	align-items: center;
+	justify-content: center;
 }
 
-.resposta{
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
+.resposta {
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
 }
 
-.grid-pagina-quizz img{
-    height: 100%;
-    width: 100%;
-    max-height: 175px;
-    object-fit: unset;
+.grid-pagina-quizz img {
+	height: 100%;
+	width: 100%;
+	max-width: 367px;
+	max-height: 200px;
+	object-fit: fill;
 }
 
-.resposta p{
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
-    
-    color: #000000;
+.resposta p {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+
+	color: #000000;
 }
 
 .respondido > * {
-    opacity: 0.3;
-    cursor: auto;
+	opacity: 0.3;
+	cursor: auto;
 }
 
-.respondido .selecionada{
-    opacity: 1;
+.respondido .selecionada {
+	opacity: 1;
 }
 
-.respondido p{
-    color: #FF4B4B;
+.respondido p {
+	color: #ff4b4b;
 }
 
-.respondido .correta p{
-    color: #009C22;
+.respondido .correta p {
+	color: #009c22;
 }
 
-.descricao-nivel{
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 20px;
-    display: flex;
-    align-items: center;
+.descricao-nivel {
+	font-weight: 700;
+	font-size: 17px;
+	line-height: 20px;
+	display: flex;
+	align-items: center;
 
-    color: #484848;
+	color: #484848;
 }
 
 .resultado {
@@ -155,6 +158,46 @@
 	align-items: center;
 }
 
-.resultado .form-conteudo-pagina-quizz{
-    margin-bottom: 57px;
+.resultado .form-conteudo-pagina-quizz {
+	margin-bottom: 57px;
+}
+
+@media (max-width: 1100px) {
+	.banner {
+		width: 100%;
+	}
+
+	.form-pagina-quizz {
+		width: 100%;
+	}
+
+	.titulo-do-banner {
+		font-size: 19px;
+		line-height: 22px;
+	}
+
+	.form-conteudo-pagina-quizz {
+		margin-top: 42px;
+		box-sizing: border-box;
+		padding: 12px;
+	}
+
+	.grid-pagina-quizz {
+		gap: 12px;
+	}
+
+	.grid-pagina-quizz img {
+		max-height: 113px;
+	}
+
+	.resultado .grid-pagina-quizz {
+		gap: 12px;
+		grid-template-columns: 1fr;
+	}
+
+	.resultado .grid-pagina-quizz img {
+		gap: 12px;
+		grid-template-columns: 1fr;
+		max-height: 100%;
+	}
 }
