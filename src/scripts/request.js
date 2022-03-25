@@ -12,3 +12,11 @@ function ReqObterQuizzPeloId(id){
 function ReqCriarQuizz(quizz){
     return axios.post(urlApi, quizz);
 }
+
+function ReqDeletarQuizz(id, key){
+    const headers = { 
+        'Authorization': key,
+    };
+
+    return axios.delete(`${urlApi}/${id}`, { headers });
+}

@@ -29,12 +29,6 @@
 	flex-direction: column;
 }
 
-.quizzes-do-usuario-conteudo .titulo-h1 ion-icon {
-	font-size: 31px;
-	color: #ec362d;
-	padding-left: 25px;
-}
-
 .sem-quizz-do-usuario {
 	display: flex;
 	width: 100%;
@@ -77,7 +71,31 @@
 	padding-top: 15px;
 }
 
-@media (max-width: 1100px) {
+<<<<<<< HEAD ======= .acoes {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: space-around;
+	position: absolute;
+
+	background: #ec362d;
+	border-radius: 10px 0px 0px 11px;
+
+	top: 15px;
+	right: 0px;
+	cursor: pointer;
+
+	width: 35px;
+	height: 90px;
+}
+
+.acoes ion-icon {
+	font-size: 30px;
+	color: white;
+	z-index: 9999;
+}
+
+>>>>>>>f5d8b709a3197d0cae36228d008be909f3a844fe @media (max-width: 1100px) {
 	.pagina-lista-quizzes .pagina-lista-quizzes-conteudo {
 		width: 100%;
 	}
